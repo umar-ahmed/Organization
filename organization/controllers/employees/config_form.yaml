@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Employee
+
+# Model Form Field configuration
+form: $/umar/organization/models/employee/fields.yaml
+
+# Model Class name
+modelClass: Umar\Organization\Models\Employee
+
+# Default redirect location
+defaultRedirect: umar/organization/employees
+
+# Create page
+create:
+    title: Create Employee
+    redirect: umar/organization/employees/update/:id
+    redirectClose: umar/organization/employees
+
+# Update page
+update:
+    title: Edit Employee
+    redirect: umar/organization/employees
+    redirectClose: umar/organization/employees
+
+# Preview page
+preview:
+    title: Preview Employee

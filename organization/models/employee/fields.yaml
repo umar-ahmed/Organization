@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    first_name:
+        label: First Name
+        span: auto
+    last_name:
+        label: Last Name
+        span: auto
+    description:
+        type: richeditor
+        size: huge
+        label: Description
+        span: auto
+    email:
+        label: Email
+        span: auto
+    phone:
+        label: Phone
+        span: auto
