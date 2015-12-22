@@ -5,18 +5,40 @@
 fields:
     first_name:
         label: First Name
+        required: true
         span: auto
     last_name:
         label: Last Name
+        required: true
         span: auto
-    description:
-        type: richeditor
-        size: huge
-        label: Description
-        span: auto
-    email:
-        label: Email
-        span: auto
-    phone:
-        label: Phone
-        span: auto
+
+tabs:
+    fields:
+        email:
+            label: Email
+            span: auto
+            tab: General
+        phone:
+            label: Phone
+            span: auto
+            tab: General
+        description:
+            type: richeditor
+            size: huge
+            label: Description
+            tab: General
+        avatar:
+            label: Picture
+            type: fileupload
+            mode: image
+            imageHeight: 400
+            imageWidth: 400
+            tab: General
+        role:
+            label: Roles
+            type: relation
+            tab: Associations
+        program:
+            label: Programs
+            type: relation
+            tab: Associations

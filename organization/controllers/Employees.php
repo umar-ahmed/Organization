@@ -1,4 +1,4 @@
-<?php namespace Umar\Organization\Controllers;
+<?php namespace UMAR\Organization\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -9,6 +9,9 @@ use UMAR\Organization\Models\Employee;
  * Employees Back-end Controller
  */
 class Employees extends Controller {
+    
+    public $requiredPermissions = ['Umar.Organization.access_employees'];
+    
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
@@ -16,13 +19,11 @@ class Employees extends Controller {
 
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
-    
-    public $requiredPermissions = ['Umar.Organization.access_employees'];
 
     public function __construct() {
         parent::__construct();
         
-        BackendMenu::setContext('Umar.Organization', 'organization', 'employees');
+        BackendMenu::setContext('UMAR.Organization', 'organization', 'employees');
     }
     
     /**

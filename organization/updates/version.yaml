@@ -1,3 +1,9 @@
 1.0.1:
     - First version of Organization
+1.0.2:
+    - Created base database tables
     - create_employees_table.php
+    - create_testimonials_table.php
+    - create_programs_table.php
+    - create_roles_table.php
+    - seed_all_tables.php

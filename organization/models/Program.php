@@ -3,9 +3,9 @@
 use Model;
 
 /**
- * Employee Model
+ * Program Model
  */
-class Employee extends Model
+class Program extends Model
 {
     
     use \October\Rain\Database\Traits\Validation;
@@ -14,17 +14,17 @@ class Employee extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'first_name' => 'required',
-        'last_name'  => 'required',
-        'email'      => 'email',
-        'avatar'     => 'image',
+        'name' => 'required',
+        'timings' => 'required',
     ];
+    
+    protected $jsonable = ['timings']; 
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'umar_organization_employees';
-    
+    public $table = 'umar_organization_programs';
+
     /**
      * @var array Guarded fields
      */
@@ -41,23 +41,11 @@ class Employee extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [
-        'role' => [
-            'UMAR\Organization\Models\Role',
-            'table' => 'umar_organization_employees_roles'
-        ],
-        'program' => [
-            'UMAR\Organization\Models\Program',
-            'table' => 'umar_organization_employees_programs'
-        ],
-    ];
+    public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [
-        'avatar' => 'System\Models\File'
-    ];
+    public $attachOne = [];
     public $attachMany = [];
 
-    
 }

@@ -35,9 +35,27 @@ class Plugin extends PluginBase {
                 'sideMenu' => [
                     'employees' => [
                         'label'       => 'Employees',
-                        'icon'        => 'icon-copy',
+                        'icon'        => 'icon-users',
                         'url'         => Backend::url('umar/organization/employees'),
                         'permissions' => ['umar.organization.access_employees']
+                    ],
+                    'roles' => [
+                        'label'       => 'Roles',
+                        'icon'        => 'icon-sitemap',
+                        'url'         => Backend::url('umar/organization/roles'),
+                        'permissions' => ['umar.organization.access_roles']
+                    ],
+                    'programs' => [
+                        'label'       => 'Programs',
+                        'icon'        => 'icon-ticket',
+                        'url'         => Backend::url('umar/organization/programs'),
+                        'permissions' => ['umar.organization.access_programs']
+                    ],
+                    'testimonials' => [
+                        'label'       => 'Testimonials',
+                        'icon'        => 'icon-comment-o',
+                        'url'         => Backend::url('umar/organization/testimonials'),
+                        'permissions' => ['umar.organization.access_testimonials']
                     ],
                 ]
             ]
@@ -47,7 +65,19 @@ class Plugin extends PluginBase {
     public function registerPermissions() {
         return [
             'umar.organization.access_employees' => [
-                'label' => 'Manage employees',
+                'label' => 'Manage Employees',
+                'tab' => 'Organization'
+            ],
+            'umar.organization.access_roles' => [
+                'label' => 'Manage Roles',
+                'tab' => 'Organization'
+            ],
+            'umar.organization.access_programs' => [
+                'label' => 'Manage Programs',
+                'tab' => 'Organization'
+            ],
+            'umar.organization.access_testimonials' => [
+                'label' => 'Manage Testimonials',
                 'tab' => 'Organization'
             ],
         ];
