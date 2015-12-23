@@ -5,8 +5,17 @@ use Model;
 /**
  * Testimonial Model
  */
-class Testimonial extends Model
-{
+class Testimonial extends Model {
+        
+    use \October\Rain\Database\Traits\Validation;
+    
+    /**
+     * @var array Validation rules
+     */
+    public $rules = [
+        'content' => 'required',
+        'source' => 'required',
+    ];
 
     /**
      * @var string The database table used by the model.

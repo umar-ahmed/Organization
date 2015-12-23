@@ -3,9 +3,9 @@
 use Model;
 
 /**
- * Role Model
+ * Membership Model
  */
-class Role extends Model
+class Membership extends Model
 {
     
     use \October\Rain\Database\Traits\Validation;
@@ -15,13 +15,16 @@ class Role extends Model
      */
     public $rules = [
         'name' => 'required',
-        'executive' => 'required',
+        'regular_rate' => 'required',
     ];
+
+    
+    protected $jsonable = ['features']; 
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'umar_organization_roles';
+    public $table = 'umar_organization_memberships';
 
     /**
      * @var array Guarded fields

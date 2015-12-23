@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Membership
+
+# Model Form Field configuration
+form: $/umar/organization/models/membership/fields.yaml
+
+# Model Class name
+modelClass: UMAR\Organization\Models\Membership
+
+# Default redirect location
+defaultRedirect: umar/organization/memberships
+
+# Create page
+create:
+    title: Create Membership
+    redirect: umar/organization/memberships/update/:id
+    redirectClose: umar/organization/memberships
+
+# Update page
+update:
+    title: Edit Membership
+    redirect: umar/organization/memberships
+    redirectClose: umar/organization/memberships
+
+# Preview page
+preview:
+    title: Preview Membership

@@ -3,15 +3,14 @@
 use BackendMenu;
 use Backend\Classes\Controller;
 use Flash;
-use UMAR\Organization\Models\Role;
+use UMAR\Organization\Models\Membership;
 
 /**
- * Roles Back-end Controller
+ * Memberships Back-end Controller
  */
-class Roles extends Controller
+class Memberships extends Controller
 {
-    
-    public $requiredPermissions = ['Umar.Organization.access_roles'];
+    public $requiredPermissions = ['Umar.Organization.access_memberships'];
     
     public $implement = [
         'Backend.Behaviors.FormController',
@@ -25,27 +24,27 @@ class Roles extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('UMAR.Organization', 'organization', 'roles');
+        BackendMenu::setContext('UMAR.Organization', 'organization', 'memberships');
     }
     
     /**
-     * Deleted checked roles.
+     * Deleted checked memberships.
      */
     public function onDelete()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
-            foreach ($checkedIds as $roleId) {
-                if (!$role = Role::find($roleId)) {
+            foreach ($checkedIds as $membershipId) {
+                if (!$membership = Membership::find($membershipId)) {
                     continue;
                 }
 
-                $role->delete();
+                $membership->delete();
             }
 
-            Flash::success('Role successfully deleted.');
+            Flash::success('Membership successfully deleted.');
         } else {
-            Flash::error('No role selected.');
+            Flash::error('No membership selected.');
         }
 
         return $this->listRefresh();

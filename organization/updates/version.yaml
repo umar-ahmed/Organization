@@ -6,4 +6,5 @@
     - create_testimonials_table.php
     - create_programs_table.php
     - create_roles_table.php
+    - create_memberships_table.php
     - seed_all_tables.php

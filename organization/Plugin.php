@@ -24,6 +24,11 @@ class Plugin extends PluginBase {
         ];
     }
     
+    /**
+     * Registers back-end navigation menus
+     *
+     * @return array
+     */
     public function registerNavigation() {
         return [
             'organization' => [
@@ -45,6 +50,12 @@ class Plugin extends PluginBase {
                         'url'         => Backend::url('umar/organization/roles'),
                         'permissions' => ['umar.organization.access_roles']
                     ],
+                    'memberships' => [
+                        'label'       => 'Memberships',
+                        'icon'        => 'icon-user',
+                        'url'         => Backend::url('umar/organization/memberships'),
+                        'permissions' => ['umar.organization.access_memberships']
+                    ],
                     'programs' => [
                         'label'       => 'Programs',
                         'icon'        => 'icon-ticket',
@@ -53,7 +64,7 @@ class Plugin extends PluginBase {
                     ],
                     'testimonials' => [
                         'label'       => 'Testimonials',
-                        'icon'        => 'icon-comment-o',
+                        'icon'        => 'icon-quote-right',
                         'url'         => Backend::url('umar/organization/testimonials'),
                         'permissions' => ['umar.organization.access_testimonials']
                     ],
@@ -62,8 +73,47 @@ class Plugin extends PluginBase {
         ];
     }
     
+    /**
+     * Registers back-end settings
+     *
+     * @return array
+     */
+    public function registerSettings() {
+        return [
+            'settings' => [
+                'label'       => 'Organization',
+                'description' => 'Manage organization information.',
+                'category'    => 'Organization',
+                'icon'        => 'icon-university',
+                'class'       => 'UMAR\Organization\Models\Settings',
+                'order'       => 500,
+                'keywords'    => 'organization logo slogan',
+                'permissions' => ['umar.organization.access_settings']
+            ]
+        ];
+    }
+    
+    /**
+     * Registers components
+     *
+     * @return array
+     */
+    public function registerComponents() {
+        return [];
+    }
+        
+    
+    /**
+     * Returns permissions associated with this plugin.
+     *
+     * @return array
+     */
     public function registerPermissions() {
         return [
+            'umar.organization.access_settings' => [
+                'label' => 'Access Organization Settings',
+                'tab' => 'Organization'
+            ],
             'umar.organization.access_employees' => [
                 'label' => 'Manage Employees',
                 'tab' => 'Organization'
@@ -78,6 +128,10 @@ class Plugin extends PluginBase {
             ],
             'umar.organization.access_testimonials' => [
                 'label' => 'Manage Testimonials',
+                'tab' => 'Organization'
+            ],
+            'umar.organization.access_memberships' => [
+                'label' => 'Manage Memberships',
                 'tab' => 'Organization'
             ],
         ];

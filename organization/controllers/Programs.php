@@ -10,6 +10,9 @@ use UMAR\Organization\Models\Program;
  */
 class Programs extends Controller
 {
+    
+    public $requiredPermissions = ['Umar.Organization.access_programs'];
+    
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController'

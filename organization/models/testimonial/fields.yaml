@@ -8,10 +8,12 @@ fields:
         type: richeditor
         size: huge
         span: auto
+        required: true
     source:
         label: Source
         type: text
         span: auto
+        required: true
     url:
         label: URL
         type: text

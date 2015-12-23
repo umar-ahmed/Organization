@@ -11,17 +11,16 @@ use UMAR\Organization\Models\Testimonial;
 class SeedAllTables extends Seeder {
     
     public function run() {
-        
-        Role::create(['name' => 'President']);
-        Role::create(['name' => 'Vice President']);
-        Role::create(['name' => 'Treasurer']);
-        Role::create(['name' => 'Secretary']);
-        
-        Program::create(['name' => 'Kids Court',
-                         'description' => 'Only for kids.']);
-        Program::create(['name' => 'Adults',
-                         'description' => 'Only for adults.']);
-        
+        /*
+        Role::create(['name' => 'President',
+                      'executive' => 'true']);
+        Role::create(['name' => 'Vice President',
+                      'executive' => 'true']);
+        Role::create(['name' => 'Treasurer',
+                      'executive' => 'true']);
+        Role::create(['name' => 'Secretary',
+                      'executive' => 'true']);
+        */
     }
 
 
