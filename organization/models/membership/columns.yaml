@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Membership Type
+        searchable: true
+    created_at:
+        label: Created At
+        type: date
+    updated_at:
+        label: Updated At
+        type: date
