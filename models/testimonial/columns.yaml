@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    source:
+        label: Source
+        searchable: true
+    url:
+        label: URL
+    created_at:
+        label: Created At
+    updated_at:
+        label: Updated At

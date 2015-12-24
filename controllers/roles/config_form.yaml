@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Role
+
+# Model Form Field configuration
+form: $/umar/organization/models/role/fields.yaml
+
+# Model Class name
+modelClass: UMAR\Organization\Models\Role
+
+# Default redirect location
+defaultRedirect: umar/organization/roles
+
+# Create page
+create:
+    title: Create Role
+    redirect: umar/organization/roles/update/:id
+    redirectClose: umar/organization/roles
+
+# Update page
+update:
+    title: Edit Role
+    redirect: umar/organization/roles
+    redirectClose: umar/organization/roles
+
+# Preview page
+preview:
+    title: Preview Role

@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    first_name:
+        label: First Name
+        required: true
+        span: auto
+    last_name:
+        label: Last Name
+        required: true
+        span: auto
+
+tabs:
+    fields:
+        email:
+            label: Email
+            span: auto
+            tab: General
+        phone:
+            label: Phone
+            span: auto
+            tab: General
+        description:
+            type: richeditor
+            size: huge
+            label: Description
+            tab: General
+        role:
+            label: Roles
+            type: relation
+            tab: Associations
+        program:
+            label: Programs
+            type: relation
+            tab: Associations
+        avatar:
+            label: Picture
+            type: mediafinder
+            mode: image

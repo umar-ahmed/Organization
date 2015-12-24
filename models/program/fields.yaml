@@ -1,0 +1,50 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Program Name
+        required: true
+        span: auto
+        
+tabs:
+    fields:
+        description:
+            type: richeditor
+            size: huge
+            label: Description
+            tab: General
+        timings:
+            label: Timings
+            tab: General
+            type: repeater
+            prompt: Add new timing
+            form:
+                fields:
+                    day:
+                        label: Day
+                        type: dropdown
+                        options:
+                            sunday: Sunday
+                            monday: Monday
+                            tuesday: Tuesday
+                            wednesday: Wednesday
+                            thursday: Thursday
+                            friday: Friday
+                            saturday: Saturday
+                    start_time:
+                        label: Start Time
+                        span: auto
+                        type: datepicker
+                        mode: time
+                    end_time:
+                        label: End Time
+                        span: auto
+                        type: datepicker
+                        mode: time
+        featured_image:
+            label: Featured Image
+            type: mediafinder
+            mode: image
+            tab: Graphics
