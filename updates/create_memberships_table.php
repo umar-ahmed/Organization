@@ -13,9 +13,9 @@ class CreateMembershipsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
-            $table->string('regular_rate');
-            $table->string('early_rate');
-            $table->string('new_rate');
+            $table->decimal('regular_rate',15,2);
+            $table->decimal('early_rate',15,2);
+            $table->decimal('new_rate',15,2);
             $table->text('description');
             $table->json('features');
             $table->timestamps();

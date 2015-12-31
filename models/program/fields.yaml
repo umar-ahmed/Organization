@@ -45,6 +45,6 @@ tabs:
                         mode: time
         featured_image:
             label: Featured Image
-            type: mediafinder
+            type: fileupload
             mode: image
             tab: Graphics

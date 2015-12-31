@@ -40,7 +40,14 @@ class Program extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'employees' => [
+            'UMAR\Organization\Models\Employee',
+            'table' => 'umar_organization_employees_programs',
+            'key' => 'program_id',
+            'otherKey' => 'employee_id'
+        ],
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

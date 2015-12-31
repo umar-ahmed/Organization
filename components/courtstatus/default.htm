@@ -1,0 +1,19 @@
+<div class="container">
+    {% if __SELF__.display %}
+    <div class="alert
+       {% if __SELF__.priority == 'warning' %}
+           alert-danger
+       {% endif %}
+       {% if __SELF__.priority == 'advisory' %}
+           alert-warning
+       {% endif %}
+       {% if __SELF__.priority == 'update' %}
+           alert-info
+       {% endif %}
+       " role="alert">
+        <strong>{{ __SELF__.date }}:</strong>
+        {{ __SELF__.message }}
+    </div>
+
+    {% endif %}
+</div>

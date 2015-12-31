@@ -42,13 +42,15 @@ class Employee extends Model
     public $hasMany = [];
     public $belongsTo = [];
     public $belongsToMany = [
-        'role' => [
+        'roles' => [
             'UMAR\Organization\Models\Role',
             'table' => 'umar_organization_employees_roles'
         ],
-        'program' => [
+        'programs' => [
             'UMAR\Organization\Models\Program',
-            'table' => 'umar_organization_employees_programs'
+            'table' => 'umar_organization_employees_programs',
+            'key' => 'employee_id',
+            'otherKey' => 'program_id',
         ],
     ];
     public $morphTo = [];

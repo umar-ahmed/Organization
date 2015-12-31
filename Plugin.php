@@ -89,6 +89,16 @@ class Plugin extends PluginBase {
                 'order'       => 500,
                 'keywords'    => 'organization logo slogan',
                 'permissions' => ['umar.organization.access_settings']
+            ],
+            'status' => [
+                'label'       => 'Status',
+                'description' => 'Manage status updates on the website',
+                'category'    => 'Organization',
+                'icon'        => 'icon-exclamation-circle',
+                'class'       => 'UMAR\Organization\Models\Status',
+                'order'       => 600,
+                'keywords'    => 'organization status court',
+                'permissions' => ['umar.organization.access_settings']
             ]
         ];
     }
@@ -100,10 +110,12 @@ class Plugin extends PluginBase {
      */
     public function registerComponents() {
         return [
-            'UMAR\Organization\Components\Organization' => 'organization'
+            'UMAR\Organization\Components\Organization' => 'organization',
+            'UMAR\Organization\Components\CourtStatus' => 'courtStatus',
+            'UMAR\Organization\Components\Programs' => 'programs',
+            'UMAR\Organization\Components\Memberships' => 'memberships',
         ];
     }
-        
     
     /**
      * Returns permissions associated with this plugin.

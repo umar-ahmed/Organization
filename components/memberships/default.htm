@@ -1,0 +1,5 @@
+{% for membership in __SELF__.memberships %}
+    {{ membership.name}} <br>
+    {{ membership.description}} <br>
+    {{ membership.regular_rate}}
+{% endfor %}

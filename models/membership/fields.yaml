@@ -15,8 +15,7 @@ tabs:
     fields:
         description:
             label: Description
-            type: richeditor
-            size: huge
+            type: text
             tab: General
         features:
             label: Features
@@ -26,6 +25,7 @@ tabs:
             form:
                 fields:
                     feature:
+                        type: text
                         placeholder: Enter a feature
         early_rate:
             label: Early Bird Rate

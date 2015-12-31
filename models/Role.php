@@ -39,7 +39,12 @@ class Role extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'roles' => [
+            'UMAR\Organization\Models\Employee',
+            'table' => 'umar_organization_employees_programs'
+        ],
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

@@ -15,7 +15,9 @@ class Membership extends Model
      */
     public $rules = [
         'name' => 'required',
-        'regular_rate' => 'required',
+        'regular_rate' => 'required|numeric',
+        'early_rate' => 'numeric',
+        'new_rate' => 'numeric',        
     ];
 
     

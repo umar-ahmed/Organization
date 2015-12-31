@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    display:
+        label: Display status
+        type: switch
+        required: true
+        comment: Flick this switch to display the current status of the courts
+        span: left
+    date:
+        label: Date
+        type: datepicker
+        mode: date
+        span: right
+        required: true
+    status_level:
+        label: Status
+        type: dropdown
+        span: left
+        required: true
+        options:
+            warning: Warning
+            advisory: Advisory
+            update: Update
+    message:
+        label: Message
+        required: true
+        span: full

@@ -27,11 +27,11 @@ tabs:
             size: huge
             label: Description
             tab: General
-        role:
+        roles:
             label: Roles
             type: relation
             tab: Associations
-        program:
+        programs:
             label: Programs
             type: relation
             tab: Associations
